@@ -6,7 +6,8 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users'); // Add this line
-const mydataRouter = require('./routes/mydata');
+//const mydataRouter = require('./routes/mydata');
+const computationRouter = require('./routes/computation');
 
 var app = express();
 
@@ -15,7 +16,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 app.use(logger('dev'));
-app.use('/mydata', mydataRouter);
+//app.use('/mydata', mydataRouter);
+app.use('/computation', computationRouter);
+
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
