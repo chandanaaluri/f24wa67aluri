@@ -1,8 +1,6 @@
 var express = require('express');
 var router = express.Router();
 const lastDigitOfId = 7; 
-
-// Define Math functions based on the last digit
 const mathFunctions = [
   Math.asinh,
   Math.asin,
